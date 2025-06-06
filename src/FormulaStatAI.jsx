@@ -1,3 +1,4 @@
+import Navbar from "./components/Navbar";
 import React from "react";
 import { motion } from "framer-motion";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
@@ -121,5 +122,6 @@ export default function FormulaStatAI() {
         </Link>
       </div>
     </div>
+    <Navbar />
   );
 }
