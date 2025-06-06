@@ -1,5 +1,5 @@
 // src/pages/AboutUs.jsx
-
+import Navbar from "../components/Navbar";
 import React from "react";
 
 export default function AboutUs() {
@@ -49,5 +49,6 @@ export default function AboutUs() {
         </p>
       </section>
     </div>
+    <Navbar />
   );
 }
