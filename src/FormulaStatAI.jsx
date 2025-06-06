@@ -144,6 +144,61 @@ export default function FormulaStatAI() {
         </div>
       </section>
 
+      // TESTIMONIALS SECTION
+import avatar1 from "./assets/testimonials/avatar1.jpg";
+import avatar2 from "./assets/testimonials/avatar2.png";
+import avatar3 from "./assets/testimonials/avatar3.webp";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Autoplay, Pagination } from "swiper/modules";
+
+const testimonials = [
+  {
+    name: "James O.",
+    text: "I made my first profit passively with Formula Stat AI. It's like having a trading genius working for me 24/7.",
+    avatar: avatar1,
+  },
+  {
+    name: "Linda A.",
+    text: "At first I doubted AI trading. But the consistent results and full control changed my mind completely.",
+    avatar: avatar2,
+  },
+  {
+    name: "Michael T.",
+    text: "The dashboard is smooth, the trades are sharp, and the profits are real. Highly recommended.",
+    avatar: avatar3,
+  },
+];
+      {/* TESTIMONIALS SECTION */}
+<section className="space-y-8 text-center">
+  <h2 className="text-3xl font-bold">What Our Users Say</h2>
+
+  <Swiper
+    modules={[Autoplay, Pagination]}
+    spaceBetween={30}
+    slidesPerView={1}
+    autoplay={{ delay: 5000 }}
+    loop={true}
+    pagination={{ clickable: true }}
+    className="max-w-4xl mx-auto"
+  >
+    {testimonials.map((t, index) => (
+      <SwiperSlide key={index}>
+        <div className="bg-slate-800 p-6 rounded-2xl shadow text-left flex flex-col items-center">
+          <img
+            src={t.avatar}
+            alt={t.name}
+            className="w-20 h-20 rounded-full object-cover mb-4"
+          />
+          <p className="text-lg text-gray-300 italic mb-2 text-center">"{t.text}"</p>
+          <h4 className="font-semibold text-blue-400">{t.name}</h4>
+        </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</section>
+
       {/* FINAL CTA SECTION */}
       <section className="text-center space-y-4">
         <h2 className="text-2xl font-bold">Join the Future of Intelligent Trading</h2>
