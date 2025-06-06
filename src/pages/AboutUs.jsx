@@ -1,11 +1,11 @@
 // src/pages/AboutUs.jsx
-import Navbar from "../components/Navbar";
 import React from "react";
+import Navbar from "../components/Navbar";
 
 export default function AboutUs() {
   return (
     <div className="min-h-screen bg-slate-950 text-white px-6 py-12 space-y-10">
-      <Navbar /> {/* ✅ Now inside the main layout */}
+      <Navbar /> {/* ✅ Navbar correctly placed at top */}
 
       <section className="text-center space-y-4">
         <h1 className="text-4xl md:text-5xl font-bold">
@@ -45,7 +45,7 @@ export default function AboutUs() {
         </p>
 
         <p className="text-blue-400 font-semibold text-lg">
-          Welcome to Formula Stat AI Trade. <br /> 
+          Welcome to Formula Stat AI Trade. <br />
           Where intelligence meets opportunity. <br />
           Where vision becomes value.
         </p>
