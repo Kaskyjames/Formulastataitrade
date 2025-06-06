@@ -1,21 +1,18 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Import pages
-import FormulaStatAI from "./FormulaStatAI"; // Home page
-import About from "./pages/About";           // About page
+
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import FormulaStatAITrade from "./FormulaStatAI"; // Home component
+import AboutUs from "./pages/AboutUs";            // About page
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        {/* Homepage Route */}
-        <Route path="/" element={<FormulaStatAI />} />
-
-        {/* About Page Route */}
-        <Route path="/about" element={<About />} />
+        <Route path="/" element={<FormulaStatAITrade />} />
+        <Route path="/about" element={<AboutUs />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
