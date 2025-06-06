@@ -117,11 +117,12 @@ export default function FormulaStatAI() {
 
       {/* ABOUT LINK */}
       <div className="text-center mt-8">
-        <Link to="/about" className="text-blue-400 underline text-lg hover:text-blue-300 transition">
-          Learn more about us →
-        </Link>
+        <a href="/about" className="text-blue-400 underline">Learn more about us</a>
+      <Navbar />
+    </div>
+  );
+      }
       </div>
     </div>
-    <Navbar />
   );
 }
