@@ -1,28 +1,42 @@
-@tailwind base; @tailwind components; @tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body { margin: 0; font-family: 'Inter', sans-serif; background-color: #020617; color: white; }
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b, #111827);
+  background-size: 300% 300%;
+  animation: backgroundMove 10s ease infinite;
+  color: white;
+}
 
-section { padding: 2rem 1rem; }
+/* Background animation */
+@keyframes backgroundMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
-h1, h2, h3 { font-weight: 700; }
+a {
+  transition: all 0.3s ease;
+}
 
-a { transition: background-color 0.3s ease, color 0.3s ease; }
+a:hover {
+  opacity: 0.85;
+}
 
-a:hover { filter: brightness(1.2); }
+h1, h2, h3 {
+  letter-spacing: 0.5px;
+}
 
-/* Responsive Layout Improvements */ @media (min-width: 768px) { section { padding: 4rem 2rem; }
-
-.text-center { text-align: center; }
-
-.grid-cols-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; } }
-
-/* Enhanced visual effects */ .bg-slate-950 { background: linear-gradient(135deg, #0f172a, #1e293b); }
-
-.rounded-xl { border-radius: 1rem; }
-
-/* Button enhancement */ button, .btn, a.btn { border-radius: 0.5rem; padding: 0.75rem 1.25rem; font-weight: 600; font-size: 1rem; display: inline-block; }
-
-.bg-blue-600 { background-color: #2563eb; }
-
-.bg-blue-600:hover { background-color: #1e40af; }
-
+section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
