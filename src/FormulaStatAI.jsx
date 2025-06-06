@@ -1,3 +1,6 @@
+import avatar1 from "./assets/testimonials/avatar1.jpg";
+import avatar2 from "./assets/testimonials/avatar2.png";
+import avatar3 from "./assets/testimonials/avatar3.webp";
 import React from "react";
 import Navbar from "./components/Navbar";
 import { motion } from "framer-motion";
