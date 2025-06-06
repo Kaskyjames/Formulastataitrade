@@ -59,6 +59,7 @@ export default function FormulaStatAI() { return ( <div className="min-h-screen 
       Access Dashboard
     </a>
   </section>
+  <a href="/about" className="text-blue-400 underline">Learn more about us</a>
 </div>
 
 ); }
