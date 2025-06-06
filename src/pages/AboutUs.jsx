@@ -5,6 +5,8 @@ import React from "react";
 export default function AboutUs() {
   return (
     <div className="min-h-screen bg-slate-950 text-white px-6 py-12 space-y-10">
+      <Navbar /> {/* ✅ Now inside the main layout */}
+
       <section className="text-center space-y-4">
         <h1 className="text-4xl md:text-5xl font-bold">
           About Formula Stat AI Trade
@@ -49,6 +51,5 @@ export default function AboutUs() {
         </p>
       </section>
     </div>
-    <Navbar />
   );
 }
