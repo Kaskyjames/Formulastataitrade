@@ -5,7 +5,9 @@ import FormulaStatAI from "./FormulaStatAI";
 import AboutUs from "./pages/AboutUs";
 import "./index.css";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
