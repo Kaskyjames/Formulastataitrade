@@ -21,16 +21,16 @@ const chartData = [
 
 export default function FormulaStatAI() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white px-4 py-8 space-y-16">
+    <div className="min-h-screen bg-slate-950 text-white px-4 py-8 space-y-24">
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="text-center space-y-6">
+      <section className="text-center space-y-6 mt-12">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl font-bold"
+          className="text-5xl md:text-6xl font-bold text-blue-400"
         >
           Formula Stat AI Trade
         </motion.h1>
@@ -38,112 +38,111 @@ export default function FormulaStatAI() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="text-xl max-w-3xl mx-auto"
+          className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300"
         >
-          Your AI-powered gateway to financial intelligence. We automate trading
-          decisions in Forex, Crypto, and Stock markets—so you can grow your
-          wealth with smart confidence.
+          Your AI-powered gateway to financial intelligence. We automate trading decisions in Forex, Crypto, and Stocks—so you can grow your wealth with smart confidence.
         </motion.p>
-        <motion.a
-          href="#"
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded text-lg"
+          className="flex justify-center gap-4 flex-wrap"
         >
-          Get Started
-        </motion.a>
+          <a
+            href="https://formulastat-ai-dashboard.vercel.app"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl text-lg transition"
+          >
+            Access Dashboard
+          </a>
+          <Link
+            to="/about"
+            className="border border-blue-400 hover:bg-blue-500 text-blue-400 hover:text-white font-semibold py-3 px-6 rounded-xl text-lg transition"
+          >
+            Learn More
+          </Link>
+        </motion.div>
       </section>
 
       {/* AI TRADING SECTION */}
-      <section className="space-y-6 text-center">
+      <section className="text-center space-y-6">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-3xl font-bold"
+          className="text-3xl md:text-4xl font-bold"
         >
-          AI-Powered Trading in Forex, Crypto, and Stocks
+          AI-Powered Trading for the Future
         </motion.h2>
-        <p className="max-w-2xl mx-auto text-lg">
-          With real-time data and intelligent automation, Formula Stat AI Trade
-          analyzes global market signals, executes precision trades, and adjusts
-          strategies faster than humanly possible.
+        <p className="max-w-2xl mx-auto text-lg text-gray-300">
+          Formula Stat AI Trade analyzes global market signals, executes precision trades, and adjusts strategies faster than humanly possible—so your money works even while you rest.
         </p>
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="space-y-6 text-center">
+      <section className="space-y-10 text-center">
         <h2 className="text-3xl font-bold">How It Works</h2>
-        <p className="max-w-2xl mx-auto text-lg">
-          Formula Stat AI is powered by deep-learning algorithms and advanced
-          trading logic. It continuously learns from the market, backtests
-          thousands of strategies, and picks the best execution path every time.
+        <p className="max-w-2xl mx-auto text-lg text-gray-300">
+          Powered by deep learning and adaptive logic, our system backtests thousands of strategies and executes the best possible trade logic in real-time.
         </p>
-        <ResponsiveContainer width="100%" height={300}>
-          <LineChart data={chartData}>
-            <XAxis dataKey="name" stroke="#fff" />
-            <YAxis stroke="#fff" />
-            <Tooltip
-              contentStyle={{ backgroundColor: "#1e293b", color: "#fff" }}
-            />
-            <Line
-              type="monotone"
-              dataKey="value"
-              stroke="#3b82f6"
-              strokeWidth={3}
-            />
-          </LineChart>
-        </ResponsiveContainer>
+        <div className="bg-slate-800 rounded-2xl p-4 md:p-8">
+          <ResponsiveContainer width="100%" height={300}>
+            <LineChart data={chartData}>
+              <XAxis dataKey="name" stroke="#fff" />
+              <YAxis stroke="#fff" />
+              <Tooltip contentStyle={{ backgroundColor: "#1e293b", color: "#fff" }} />
+              <Line
+                type="monotone"
+                dataKey="value"
+                stroke="#3b82f6"
+                strokeWidth={3}
+              />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
       </section>
 
       {/* WHY TRUST US */}
-      <section className="space-y-6 text-center">
-        <h2 className="text-2xl font-bold">Why Trust Formula Stat AI Trade?</h2>
+      <section className="space-y-8 text-center">
+        <h2 className="text-3xl font-bold">Why Trust Formula Stat AI Trade?</h2>
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto text-left">
-          <div className="bg-slate-800 p-6 rounded-xl">
-            <h3 className="text-xl font-semibold mb-2">Transparency & Control</h3>
-            <p>
-              Every trade is visible to you. Monitor performance, withdraw
-              profits, or pause trading anytime via your dashboard.
+          <div className="bg-slate-800 p-6 rounded-xl shadow">
+            <h3 className="text-xl font-semibold mb-2 text-blue-400">Transparency & Control</h3>
+            <p className="text-gray-300">
+              Every trade is visible to you. Monitor performance, withdraw profits, or pause trading anytime via your dashboard.
             </p>
           </div>
-          <div className="bg-slate-800 p-6 rounded-xl">
-            <h3 className="text-xl font-semibold mb-2">Smarter Decisions</h3>
-            <p>
-              AI processes more data than any trader can. It spots opportunities,
-              adapts to news, and protects your capital with precision.
+          <div className="bg-slate-800 p-6 rounded-xl shadow">
+            <h3 className="text-xl font-semibold mb-2 text-blue-400">Smarter Decisions</h3>
+            <p className="text-gray-300">
+              Our AI processes millions of data points in seconds—spotting opportunities, reacting to news, and adapting in real time.
             </p>
           </div>
-          <div className="bg-slate-800 p-6 rounded-xl">
-            <h3 className="text-xl font-semibold mb-2">Tailored For You</h3>
-            <p>
-              From risk preferences to strategy goals, our AI shapes your trading
-              journey to match your financial personality.
+          <div className="bg-slate-800 p-6 rounded-xl shadow">
+            <h3 className="text-xl font-semibold mb-2 text-blue-400">Tailored For You</h3>
+            <p className="text-gray-300">
+              Whether you're risk-averse or aggressive, our system aligns with your strategy and adjusts as your goals evolve.
             </p>
           </div>
         </div>
       </section>
 
-      {/* CTA SECTION */}
+      {/* FINAL CTA SECTION */}
       <section className="text-center space-y-4">
-        <h2 className="text-2xl font-bold">
-          Join the Future of Intelligent Trading
-        </h2>
-        <p className="max-w-xl mx-auto text-lg">
-          Let Formula Stat AI Trade work while you focus on living. Start with
-          confidence, grow with precision.
+        <h2 className="text-2xl font-bold">Join the Future of Intelligent Trading</h2>
+        <p className="max-w-xl mx-auto text-lg text-gray-300">
+          Let Formula Stat AI Trade handle the heavy lifting — so you can focus on what matters most in life.
         </p>
         <a
-          href="#"
-          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded text-lg inline-block"
+          href="https://formulastat-ai-dashboard.vercel.app"
+          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl text-lg inline-block transition"
         >
-          Access Dashboard
+          Launch Dashboard
         </a>
       </section>
 
-      {/* ABOUT LINK */}
-      <div className="text-center mt-8">
+      {/* FOOTER NAV */}
+      <div className="text-center mt-12">
         <Link
           to="/about"
           className="text-blue-400 underline text-lg hover:text-blue-300 transition"
