@@ -10,6 +10,8 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { Link } from "react-router-dom";
+import Lottie from "lottie-react";
+import animationData from "./assets/Animation_1.json"; // Lottie file
 
 const chartData = [
   { name: "Jan", value: 400 },
@@ -34,6 +36,17 @@ export default function FormulaStatAI() {
         >
           Formula Stat AI Trade
         </motion.h1>
+
+        {/* LOTTIE ANIMATION */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 1 }}
+          className="max-w-md mx-auto"
+        >
+          <Lottie animationData={animationData} loop={true} />
+        </motion.div>
+
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -42,6 +55,7 @@ export default function FormulaStatAI() {
         >
           Your AI-powered gateway to financial intelligence. We automate trading decisions in Forex, Crypto, and Stocks—so you can grow your wealth with smart confidence.
         </motion.p>
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
