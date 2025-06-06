@@ -1,59 +1,81 @@
-import React, { useEffect } from "react";
-import Navbar from "../components/Navbar";
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
-export default function AboutUs() {
-  useEffect(() => {
-    document.title = "About Us - Formula Stat AI Trade";
-  }, []);
-
+export default function About() {
   return (
-    <>
-      <Navbar />
-      <main className="min-h-screen bg-slate-950 text-white px-6 py-12 space-y-10">
-        <section className="text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold">
-            About Formula Stat AI Trade
-          </h1>
-          <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-300">
-            At <span className="text-blue-400 font-semibold">Formula Stat AI Trade</span>, we believe financial freedom shouldn't be a luxury for the few.
-            Our mission is to make intelligent, AI-powered trading accessible, reliable, and beneficial — for everyone.
-          </p>
-        </section>
+    <div className="min-h-screen bg-slate-950 text-white px-4 py-16 space-y-16">
+      {/* PAGE TITLE */}
+      <motion.h1
+        className="text-4xl md:text-5xl font-bold text-center text-blue-400"
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        About Formula Stat AI Trade
+      </motion.h1>
 
-        <section className="max-w-4xl mx-auto space-y-6 text-base leading-relaxed text-gray-200">
-          <p>
-            Born from a deep understanding of global financial markets and the capabilities of advanced technology,
-            <strong className="text-white"> Formula Stat AI Trade</strong> integrates cutting-edge Artificial Intelligence with precision-driven, real-time data analytics.
-            We provide fully automated trading across <strong className="text-white">Forex, Crypto, and Stock</strong> markets — from one seamless, intelligent system.
-          </p>
+      {/* MISSION SECTION */}
+      <section className="max-w-4xl mx-auto space-y-6 text-center md:text-left">
+        <motion.p
+          className="text-lg text-gray-300"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+        >
+          Formula Stat AI Trade is more than just a trading platform — it's a vision turned into a powerful reality. Built for dreamers, risk-takers, and investors who believe in the power of automation and intelligence.
+        </motion.p>
 
-          <p>
-            What makes us different is not just our innovation, but our intention: to create a platform that empowers ordinary people to succeed in a market
-            often dominated by the elite. We decode the noise, break down the barriers, and replace confusion with confidence.
-          </p>
+        <motion.p
+          className="text-lg text-gray-300"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+        >
+          We leverage advanced algorithms and deep learning models to automate trading across Forex, Crypto, and Stocks. That means real-time decision-making, 24/7 monitoring, and data-driven growth — all without lifting a finger.
+        </motion.p>
 
-          <p>
-            Our AI doesn’t just react — it learns, adapts, and evolves. Running 24/7, it eliminates emotional bias and human error,
-            delivering results with consistency, speed, and accuracy. It's not magic — it's mastery.
-          </p>
+        <motion.p
+          className="text-lg text-gray-300"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
+        >
+          Our goal is simple: put the power of institutional-grade AI trading in the hands of everyday people — with transparency, control, and peace of mind.
+        </motion.p>
+      </section>
 
-          <p>
-            <strong className="text-white">Formula Stat AI Trade</strong> is more than a tool — it’s your trusted companion on the journey to financial transformation.
-            We’re a movement built on transparency, truth, and smart technology.
+      {/* HIGHLIGHTS SECTION */}
+      <section className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto text-center">
+        <div className="bg-slate-800 p-6 rounded-xl shadow space-y-2">
+          <h3 className="text-xl font-semibold text-blue-400">Mission</h3>
+          <p className="text-gray-300">
+            Democratize access to intelligent trading through automation and simplicity.
           </p>
+        </div>
+        <div className="bg-slate-800 p-6 rounded-xl shadow space-y-2">
+          <h3 className="text-xl font-semibold text-blue-400">Vision</h3>
+          <p className="text-gray-300">
+            A future where AI-powered wealth creation is accessible to all, not just the elite.
+          </p>
+        </div>
+        <div className="bg-slate-800 p-6 rounded-xl shadow space-y-2">
+          <h3 className="text-xl font-semibold text-blue-400">Core Values</h3>
+          <p className="text-gray-300">
+            Trust, transparency, empowerment, and innovation — we don’t just build tools, we build futures.
+          </p>
+        </div>
+      </section>
 
-          <p>
-            Whether you're just starting out, scaling up, or seeking freedom from manual trading routines — we’re built for you.
-            For the visionaries. For the everyday strivers. For those who believe success should be smart, automated, and fair.
-          </p>
-
-          <p className="text-blue-400 font-semibold text-lg">
-            Welcome to Formula Stat AI Trade. <br />
-            Where intelligence meets opportunity. <br />
-            Where vision becomes value.
-          </p>
-        </section>
-      </main>
-    </>
+      {/* CTA */}
+      <div className="text-center mt-12">
+        <Link
+          to="/"
+          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl text-lg transition"
+        >
+          Back to Home
+        </Link>
+      </div>
+    </div>
   );
 }
