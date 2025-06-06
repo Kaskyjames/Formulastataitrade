@@ -1,5 +1,3 @@
-// src/components/Navbar.jsx
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -7,7 +5,6 @@ import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-
   const toggleMenu = () => setOpen(!open);
 
   return (
@@ -23,7 +20,7 @@ export default function Navbar() {
         </Link>
 
         <div className="md:hidden">
-          <button onClick={toggleMenu}>
+          <button onClick={toggleMenu} aria-label="Toggle Menu">
             {open ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
@@ -31,9 +28,9 @@ export default function Navbar() {
         <ul className="hidden md:flex space-x-6 text-lg">
           <li><Link to="/" className="hover:text-blue-400">Home</Link></li>
           <li><Link to="/about" className="hover:text-blue-400">About</Link></li>
-          <li><a href="#" className="hover:text-blue-400">Services</a></li>
-          <li><a href="#" className="hover:text-blue-400">Dashboard</a></li>
-          <li><a href="#" className="hover:text-blue-400">Contact</a></li>
+          <li><Link to="/services" className="hover:text-blue-400">Services</Link></li>
+          <li><Link to="/dashboard" className="hover:text-blue-400">Dashboard</Link></li>
+          <li><Link to="/contact" className="hover:text-blue-400">Contact</Link></li>
         </ul>
       </div>
 
@@ -42,9 +39,9 @@ export default function Navbar() {
         <ul className="md:hidden flex flex-col space-y-4 px-6 pb-4 text-lg bg-slate-950">
           <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
           <li><Link to="/about" onClick={toggleMenu}>About</Link></li>
-          <li><a href="#" onClick={toggleMenu}>Services</a></li>
-          <li><a href="#" onClick={toggleMenu}>Dashboard</a></li>
-          <li><a href="#" onClick={toggleMenu}>Contact</a></li>
+          <li><Link to="/services" onClick={toggleMenu}>Services</Link></li>
+          <li><Link to="/dashboard" onClick={toggleMenu}>Dashboard</Link></li>
+          <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
         </ul>
       )}
     </motion.nav>
