@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navbar from "./components/Navbar";
 import { motion } from "framer-motion";
@@ -24,6 +23,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
+
+// Import ServicesSection
+import ServicesSection from "./pages/ServicesSection";
 
 const chartData = [
   { name: "Jan", value: 400 },
@@ -83,7 +85,9 @@ export default function FormulaStatAI() {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300"
         >
-          Your AI-powered gateway to financial intelligence. We automate trading decisions in Forex, Crypto, and Stocks—so you can grow your wealth with smart confidence.
+          Your AI-powered gateway to financial intelligence. We automate trading
+          decisions in Forex, Crypto, and Stocks—so you can grow your wealth with
+          smart confidence.
         </motion.p>
 
         <motion.div
@@ -119,15 +123,21 @@ export default function FormulaStatAI() {
           AI-Powered Trading for the Future
         </motion.h2>
         <p className="max-w-2xl mx-auto text-lg text-gray-300">
-          Formula Stat AI Trade analyzes global market signals, executes precision trades, and adjusts strategies faster than humanly possible—so your money works even while you rest.
+          Formula Stat AI Trade analyzes global market signals, executes precision
+          trades, and adjusts strategies faster than humanly possible—so your money
+          works even while you rest.
         </p>
       </section>
+
+      {/* SERVICES SECTION */}
+      <ServicesSection />
 
       {/* HOW IT WORKS */}
       <section className="space-y-10 text-center">
         <h2 className="text-3xl font-bold">How It Works</h2>
         <p className="max-w-2xl mx-auto text-lg text-gray-300">
-          Powered by deep learning and adaptive logic, our system backtests thousands of strategies and executes the best possible trade logic in real-time.
+          Powered by deep learning and adaptive logic, our system backtests thousands
+          of strategies and executes the best possible trade logic in real-time.
         </p>
         <div className="bg-slate-800 rounded-2xl p-4 md:p-8">
           <ResponsiveContainer width="100%" height={300}>
@@ -135,12 +145,7 @@ export default function FormulaStatAI() {
               <XAxis dataKey="name" stroke="#fff" />
               <YAxis stroke="#fff" />
               <Tooltip contentStyle={{ backgroundColor: "#1e293b", color: "#fff" }} />
-              <Line
-                type="monotone"
-                dataKey="value"
-                stroke="#3b82f6"
-                strokeWidth={3}
-              />
+              <Line type="monotone" dataKey="value" stroke="#3b82f6" strokeWidth={3} />
             </LineChart>
           </ResponsiveContainer>
         </div>
@@ -151,21 +156,26 @@ export default function FormulaStatAI() {
         <h2 className="text-3xl font-bold">Why Trust Formula Stat AI Trade?</h2>
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto text-left">
           <div className="bg-slate-800 p-6 rounded-xl shadow">
-            <h3 className="text-xl font-semibold mb-2 text-blue-400">Transparency & Control</h3>
+            <h3 className="text-xl font-semibold mb-2 text-blue-400">
+              Transparency & Control
+            </h3>
             <p className="text-gray-300">
-              Every trade is visible to you. Monitor performance, withdraw profits, or pause trading anytime via your dashboard.
+              Every trade is visible to you. Monitor performance, withdraw profits, or
+              pause trading anytime via your dashboard.
             </p>
           </div>
           <div className="bg-slate-800 p-6 rounded-xl shadow">
             <h3 className="text-xl font-semibold mb-2 text-blue-400">Smarter Decisions</h3>
             <p className="text-gray-300">
-              Our AI processes millions of data points in seconds—spotting opportunities, reacting to news, and adapting in real time.
+              Our AI processes millions of data points in seconds—spotting opportunities,
+              reacting to news, and adapting in real time.
             </p>
           </div>
           <div className="bg-slate-800 p-6 rounded-xl shadow">
             <h3 className="text-xl font-semibold mb-2 text-blue-400">Tailored For You</h3>
             <p className="text-gray-300">
-              Whether you're risk-averse or aggressive, our system aligns with your strategy and adjusts as your goals evolve.
+              Whether you're risk-averse or aggressive, our system aligns with your strategy
+              and adjusts as your goals evolve.
             </p>
           </div>
         </div>
@@ -203,25 +213,8 @@ export default function FormulaStatAI() {
       <section className="text-center space-y-4">
         <h2 className="text-2xl font-bold">Join the Future of Intelligent Trading</h2>
         <p className="max-w-xl mx-auto text-lg text-gray-300">
-          Let Formula Stat AI Trade handle the heavy lifting — so you can focus on what matters most in life.
+          Let Formula Stat AI Trade handle the heavy lifting — so you can focus on what
+          matters most in life.
         </p>
         <a
-          href="https://formulastat-ai-dashboard.vercel.app"
-          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl text-lg inline-block transition"
-        >
-          Launch Dashboard
-        </a>
-      </section>
-
-      {/* FOOTER NAV */}
-      <div className="text-center mt-12">
-        <Link
-          to="/about"
-          className="text-blue-400 underline text-lg hover:text-blue-300 transition"
-        >
-          Learn more about us →
-        </Link>
-      </div>
-    </div>
-  );
-}
+          href="https://formulastat-ai-dashboard.vercel.app
