@@ -1,7 +1,8 @@
+// src/pages/Services.jsx
 import React from "react";
 import { motion } from "framer-motion";
 
-// Update these paths with your actual images or gifs stored in public folder
+// Service card data
 const services = [
   {
     title: "Forex Trading",
@@ -31,11 +32,12 @@ export default function ServicesSection() {
       <h2 className="text-4xl font-bold text-center mb-12 text-blue-500">
         Our Services
       </h2>
-      <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+
+      <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {services.map(({ title, description, image }, idx) => (
           <motion.div
             key={idx}
-            className="bg-slate-800 rounded-xl overflow-hidden shadow-md cursor-pointer"
+            className="bg-slate-800 rounded-xl overflow-hidden shadow-md cursor-pointer hover:shadow-blue-500/30 transition-shadow"
             whileHover={{ scale: 1.05, opacity: 0.95 }}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
