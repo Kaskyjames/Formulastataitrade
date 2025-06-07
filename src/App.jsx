@@ -3,6 +3,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FormulaStatAITrade from "./FormulaStatAI"; // Homepage
 import AboutUs from "./pages/AboutUs";            // About Page
+import Services from "./pages/Services";          // Services Page (new)
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
 
         {/* About Route */}
         <Route path="/about" element={<AboutUs />} />
+
+        {/* Services Route */}
+        <Route path="/services" element={<Services />} />
       </Routes>
     </BrowserRouter>
   );
