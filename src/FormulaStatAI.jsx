@@ -69,7 +69,6 @@ export default function FormulaStatAI() {
           Formula Stat AI Trade
         </motion.h1>
 
-        {/* LOTTIE ANIMATION */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -217,4 +216,12 @@ export default function FormulaStatAI() {
           matters most in life.
         </p>
         <a
-          href="https://formulastat-ai-dashboard.vercel.app
+          href="https://formulastat-ai-dashboard.vercel.app"
+          className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl text-lg transition"
+        >
+          Get Started Now
+        </a>
+      </section>
+    </div>
+  );
+}
