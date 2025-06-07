@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-
 const LogoHero = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-[#f8faff]">
