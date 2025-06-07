@@ -16,3 +16,15 @@ function App() {
 }
 
 export default App;
+import LogoHero from "@/components/LogoHero";
+
+function Home() {
+  return (
+    <>
+      <LogoHero />
+      {/* other components */}
+    </>
+  );
+}
+
+export default Home;
