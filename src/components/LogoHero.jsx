@@ -1,4 +1,4 @@
-// components/LogoHero.jsx
+
 import React from 'react';
 
 const LogoHero = () => {
