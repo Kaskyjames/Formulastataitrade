@@ -1,36 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { useEffect } from "react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const toggleMenu = () => setOpen(!open);
-
-  // Controls for animation
-  const controls = useAnimation();
-
-  useEffect(() => {
-    async function sequence() {
-      // Rotate 3 times (1080deg) around Y-axis
-      await controls.start({
-        rotateY: 1080,
-        transition: { duration: 3, ease: "easeInOut" },
-      });
-
-      // Zoom in and out repeatedly
-      await controls.start({
-        scale: [1, 1.3, 1, 1.3, 1],
-        transition: { duration: 2, ease: "easeInOut" },
-      });
-
-      // Reset rotation and scale for continuous loop (optional)
-      controls.set({ rotateY: 0, scale: 1 });
-    }
-
-    sequence();
-  }, [controls]);
 
   return (
     <motion.nav
@@ -44,9 +19,26 @@ export default function Navbar() {
           <motion.img
             src="/logo.png"
             alt="Formula Stat AI Trade Logo"
-            className="w-14 md:w-16 lg:w-20" // bigger sizes for visibility
-            animate={controls}
-            style={{ transformStyle: "preserve-3d" }} // enable 3D transform
+            className="w-14 md:w-16 lg:w-20"
+            style={{ transformStyle: "preserve-3d" }}
+            animate={{
+              rotateY: [0, 1080], // 3 spins
+              scale: [1, 1.3, 1, 1.3, 1], // zoom in/out twice
+            }}
+            transition={{
+              rotateY: {
+                duration: 9, // 3 spins in 9 seconds (3s per spin)
+                ease: "linear",
+                repeat: Infinity,
+              },
+              scale: {
+                duration: 4,
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatType: "reverse",
+                times: [0, 0.25, 0.5, 0.75, 1],
+              },
+            }}
           />
           <span className="text-2xl font-bold text-blue-500 select-none">
             Formula Stat AI Trade
@@ -88,7 +80,6 @@ export default function Navbar() {
         </ul>
       </div>
 
-      {/* Mobile Menu */}
       {open && (
         <ul className="md:hidden flex flex-col space-y-4 px-6 pb-4 text-lg bg-slate-950">
           <li>
