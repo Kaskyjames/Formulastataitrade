@@ -1,145 +1,94 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaBitcoin, FaChartLine, FaExchangeAlt } from "react-icons/fa";
-
-const services = [
-  {
-    id: 1,
-    title: "Forex Trading",
-    icon: <FaExchangeAlt size={42} className="text-blue-500" />,
-    color: "text-blue-500",
-    offers: [
-      {
-        level: "Beginner",
-        description:
-          "Get started in Forex with guided tutorials, demo accounts, and risk-managed strategies tailored for newcomers.",
-      },
-      {
-        level: "Ambitious",
-        description:
-          "Elevate your trading with AI-powered insights, automated signals, and real-time sentiment analysis.",
-      },
-      {
-        level: "Elite",
-        description:
-          "Access institutional-level tools, personal trading AI assistants, and deep-dive reporting features.",
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "Cryptocurrency",
-    icon: <FaBitcoin size={42} className="text-yellow-400" />,
-    color: "text-yellow-400",
-    offers: [
-      {
-        level: "Beginner",
-        description:
-          "Learn crypto basics, wallet safety, and how to trade major tokens with AI-led education modules.",
-      },
-      {
-        level: "Ambitious",
-        description:
-          "Spot market patterns early with predictive AI, customized alerts, and portfolio trackers.",
-      },
-      {
-        level: "Elite",
-        description:
-          "Gain edge in DeFi, yield farming, and NFT analytics with real-time performance dashboards.",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "Stock Market",
-    icon: <FaChartLine size={42} className="text-green-400" />,
-    color: "text-green-400",
-    offers: [
-      {
-        level: "Beginner",
-        description:
-          "Start with stock fundamentals, simulated trading, and AI-generated safe picks.",
-      },
-      {
-        level: "Ambitious",
-        description:
-          "Leverage trend projections and diversification models crafted by our AI engine.",
-      },
-      {
-        level: "Elite",
-        description:
-          "Unlock hedge-level algorithms, private beta features, and priority support for dynamic strategies.",
-      },
-    ],
-  },
-];
 
 export default function ServicesSection() {
   return (
-    <section className="relative z-10 py-20 bg-gradient-to-b from-[#0a1b2d] to-[#162a46] text-white overflow-hidden">
-      {/* BACKGROUND EFFECTS (Optional Canvas) */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute w-full h-full opacity-20">
-          <canvas id="particles" className="w-full h-full" />
-        </div>
-        <div className="absolute top-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+    <section className="max-w-6xl mx-auto px-6 py-16 space-y-12 text-white">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="text-center"
+      >
+        <h2 className="text-4xl font-bold text-blue-400 mb-2">Our Cutting-Edge Services</h2>
+        <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+          Smart, AI-powered solutions designed to grow your wealth and simplify your trading journey.
+        </p>
+      </motion.div>
+
+      <div className="grid md:grid-cols-2 gap-10">
+        {/* Forex Trading */}
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="bg-slate-800 rounded-xl p-8 shadow-lg"
+        >
+          <h3 className="text-2xl font-semibold text-blue-400 mb-3">Precision Forex Trading</h3>
+          <p className="text-gray-300 leading-relaxed">
+            Our AI algorithms analyze global currency markets in real-time, executing trades with lightning speed and pinpoint accuracy — maximizing your profits while minimizing risks.
+          </p>
+        </motion.div>
+
+        {/* Crypto Trading */}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="bg-slate-800 rounded-xl p-8 shadow-lg"
+        >
+          <h3 className="text-2xl font-semibold text-blue-400 mb-3">Automated Crypto Strategies</h3>
+          <p className="text-gray-300 leading-relaxed">
+            Navigate the volatile crypto markets with confidence. Our adaptive AI identifies trends, spots opportunities, and executes trades 24/7, even when you sleep.
+          </p>
+        </motion.div>
+
+        {/* Stock Market Trading */}
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="bg-slate-800 rounded-xl p-8 shadow-lg"
+        >
+          <h3 className="text-2xl font-semibold text-blue-400 mb-3">AI-Driven Stock Insights</h3>
+          <p className="text-gray-300 leading-relaxed">
+            Leverage deep learning models that scan thousands of stocks daily, providing you with smart, data-backed trades and portfolio management.
+          </p>
+        </motion.div>
+
+        {/* AI-Powered Trading System */}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="bg-slate-800 rounded-xl p-8 shadow-lg"
+        >
+          <h3 className="text-2xl font-semibold text-blue-400 mb-3">Next-Level AI Trading</h3>
+          <p className="text-gray-300 leading-relaxed">
+            At the core of everything is our proprietary AI engine — continuously learning, adapting, and evolving to outsmart markets and deliver consistent returns.
+          </p>
+        </motion.div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6">
-        {/* TITLE */}
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center text-4xl font-bold mb-6"
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="text-center mt-12"
+      >
+        <a
+          href="https://formulastat-ai-dashboard.vercel.app"
+          className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-xl text-lg transition"
         >
-          Tailored Trading Services
-        </motion.h2>
-
-        {/* SUBTEXT */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="text-center text-lg max-w-2xl mx-auto text-white/80 mb-14"
-        >
-          Whether you’re starting out, scaling up, or already elite — Formula Stat AI Trade gives you intelligent tools designed to meet you exactly where you are.
-        </motion.p>
-
-        {/* SERVICE CARDS */}
-        <div className="grid md:grid-cols-3 gap-10">
-          {services.map(({ id, title, icon, offers, color }) => (
-            <motion.div
-              key={id}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: id * 0.2 }}
-              viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all"
-            >
-              <div className="flex justify-center mb-4">{icon}</div>
-              <h3 className={`text-xl font-semibold text-center mb-6 ${color}`}>
-                {title}
-              </h3>
-              <ul className="space-y-4">
-                {offers.map(({ level, description }, idx) => (
-                  <li
-                    key={idx}
-                    className="bg-white/5 p-4 rounded-xl border border-white/10"
-                  >
-                    <h4 className="font-bold mb-1 text-white/90">{level}</h4>
-                    <p className="text-sm text-white/80 leading-relaxed">
-                      {description}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
-      </div>
+          Explore Our Dashboard
+        </a>
+      </motion.div>
     </section>
   );
 }
