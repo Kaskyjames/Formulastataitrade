@@ -1,17 +1,19 @@
-
 import { motion } from "framer-motion";
 
-export default function LogoHero() {
+const LogoHero = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-900">
+    <div className="flex justify-center items-center min-h-screen bg-[#f8faff]">
       <motion.img
-        src="/logo.png"
+        src="/formulastatlogo.png"
         alt="FormulaStat AI Logo"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-        className="w-48 h-48 md:w-64 md:h-64 object-contain drop-shadow-lg"
+        className="w-[180px] md:w-[220px] h-auto cursor-pointer"
+        initial={{ opacity: 0, scale: 0.5, rotate: -90 }}
+        animate={{ opacity: 1, scale: 1, rotate: 0 }}
+        transition={{ duration: 1.2, ease: "easeInOut" }}
+        whileHover={{ scale: 1.1, y: -5 }}
       />
     </div>
   );
-}
+};
+
+export default LogoHero;
