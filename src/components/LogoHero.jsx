@@ -1,15 +1,13 @@
-import { motion } from "framer-motion";
+// components/LogoHero.jsx
+import React from 'react';
+
 const LogoHero = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-[#f8faff]">
-      <motion.img
+    <div className="flex items-center justify-center h-screen bg-black">
+      <img
         src="/formulastatlogo.png"
-        alt="FormulaStat AI Logo"
-        className="w-[180px] md:w-[220px] h-auto cursor-pointer"
-        initial={{ opacity: 0, scale: 0.5, rotate: -90 }}
-        animate={{ opacity: 1, scale: 1, rotate: 0 }}
-        transition={{ duration: 1.2, ease: "easeInOut" }}
-        whileHover={{ scale: 1.1, y: -5 }}
+        alt="Formula Stat Logo"
+        className="w-48 h-48 transition-all duration-700 ease-in-out transform hover:scale-110 hover:rotate-12 animate-logo-entry"
       />
     </div>
   );
