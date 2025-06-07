@@ -1,8 +1,7 @@
-
-
+// src/App.jsx
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import FormulaStatAITrade from "./FormulaStatAI"; // Home component
+import FormulaStatAITrade from "./FormulaStatAI"; // Homepage
 import AboutUs from "./pages/AboutUs";            // About page
 
 function App() {
