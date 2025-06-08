@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import logo from "../assets/logo.png";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -14,7 +15,10 @@ export default function Navbar() {
       transition={{ duration: 0.6 }}
       className="sticky top-0 z-50 bg-slate-950 text-white border-b border-slate-800 shadow-sm"
     >
-      <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+      <div className="flex items-center gap-3">
+  <img src={logo} alt="Formula Stat AI Logo" className="w-10 h-10 object-contain" />
+  <span className="text-xl font-bold text-blue-400">Formula Stat AI</span>
+</div>
         <Link to="/" className="flex items-center space-x-3">
           <motion.img
             src="/logo.png"
