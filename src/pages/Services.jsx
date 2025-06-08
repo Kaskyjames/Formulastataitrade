@@ -53,10 +53,10 @@ export default function ServicesSection() {
   <Lottie animationData={lottie} loop />
 </div>
 </figure>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">{description}</p>
-            </div>
+            <div className="px-6 py-5 text-center">
+  <h3 className="text-2xl font-semibold mb-3 text-white">{title}</h3>
+  <p className="text-gray-400 text-base leading-relaxed">{description}</p>
+</div>
           </motion.div>
         ))}
       </div>
