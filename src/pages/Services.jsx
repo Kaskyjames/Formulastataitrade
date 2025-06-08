@@ -1,8 +1,8 @@
-// src/pages/Services.jsx
+// src/components/ServicesSection.jsx
 import React from "react";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
-import { ArrowRight } from "lucide-react"; // for CTA icon fallback
+import { ArrowRight } from "lucide-react";
 
 import forexAnimation from "../../public/animations/forex-lottie.json";
 import cryptoAnimation from "../../public/animations/crypto-lottie.json";
@@ -60,7 +60,7 @@ export default function ServicesSection() {
         {services.map(({ title, description, lottie, anchor }, idx) => (
           <motion.article
             key={idx}
-            className="bg-slate-800 rounded-2xl overflow-hidden shadow-xl cursor-pointer transition-all duration-300 hover:shadow-[0_0_30px_#3b82f6] hover:scale-105"
+            className="bg-slate-800 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:shadow-[0_0_30px_#3b82f6] hover:scale-105"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
