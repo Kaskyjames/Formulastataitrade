@@ -88,6 +88,14 @@ export default function FormulaStatAI() {
   className="w-full max-w-3xl rounded-xl mx-auto shadow-lg"
 />
         </motion.div>
+      <div className="mt-6">
+  <Link
+    to="/signup"
+    className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-2xl shadow-md text-lg transition duration-300"
+  >
+    Get Started
+  </Link>
+</div>
 
         <motion.p
           initial={{ opacity: 0 }}
