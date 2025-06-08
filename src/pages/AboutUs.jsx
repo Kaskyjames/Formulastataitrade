@@ -20,21 +20,21 @@ export default function About() {
       </section>
 
       {/* VISION + WHY WE EXIST */}
-      <section className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-        <div className="bg-slate-800 p-6 rounded-xl shadow space-y-4">
-          <h2 className="text-2xl font-semibold text-blue-300">Our Vision</h2>
-          <p className="text-gray-300">
-            We envision a world where anyone—from beginners to seasoned traders—can benefit from intelligent, automated trading systems that operate with transparency, reliability, and speed.
-          </p>
-        </div>
+     <section className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+  <div className="bg-slate-800 p-6 rounded-xl shadow space-y-4 transform transition-transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg">
+    <h2 className="text-2xl font-semibold text-blue-300">Our Vision</h2>
+    <p className="text-gray-300">
+      We envision a world where anyone—from beginners to seasoned traders—can benefit from intelligent, automated trading systems that operate with transparency, reliability, and speed.
+    </p>
+  </div>
 
-        <div className="bg-slate-800 p-6 rounded-xl shadow space-y-4">
-          <h2 className="text-2xl font-semibold text-blue-300">Why We Exist</h2>
-          <p className="text-gray-300">
-            Trading is stressful and time-consuming. Formula Stat AI Trade takes the guesswork out of it, giving users freedom, clarity, and performance backed by data—not emotion.
-          </p>
-        </div>
-      </section>
+  <div className="bg-slate-800 p-6 rounded-xl shadow space-y-4 transform transition-transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg">
+    <h2 className="text-2xl font-semibold text-blue-300">Why We Exist</h2>
+    <p className="text-gray-300">
+      Trading is stressful and time-consuming. Formula Stat AI Trade takes the guesswork out of it, giving users freedom, clarity, and performance backed by data—not emotion.
+    </p>
+  </div>
+</section>
 
       {/* WHAT MAKES US DIFFERENT */}
       <section className="max-w-5xl mx-auto text-center space-y-6">
