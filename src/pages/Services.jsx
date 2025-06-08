@@ -56,7 +56,7 @@ export default function ServicesSection() {
                 <img
                   src={image}
                   alt={`${title} service image`}
-                  className="w-36 h-auto object-contain drop-shadow-xl"
+                  className="w-40 h-auto object-contain drop-shadow-xl"
                   loading="lazy"
                 />
               )}
