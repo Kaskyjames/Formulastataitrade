@@ -7,7 +7,7 @@ const services = [
   {
     title: "Forex Trading",
     description: "Trade currencies worldwide with AI-powered precision and real-time market insights.",
-    lottie: forexAnimation, // Using Lottie animation
+    lottie: "forex-lottie.json", // path relative to public/animations
   },
   {
     title: "Cryptocurrency",
