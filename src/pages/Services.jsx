@@ -2,29 +2,32 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
+
 import forexAnimation from "../../public/animations/forex-lottie.json";
+import cryptoAnimation from "../../public/animations/crypto-lottie.json";
+import stocksAnimation from "../../public/animations/stocks-lottie.json";
+import aiTradingAnimation from "../../public/animations/ai-lottie.json";
 
 const services = [
   {
     title: "Forex Trading",
     description: "Trade currencies worldwide with AI-powered precision and real-time market insights.",
     lottie: forexAnimation,
-    image: "/images/forex-chart.png",
   },
   {
     title: "Cryptocurrency",
     description: "Navigate volatile crypto markets with adaptive algorithms and secure automation.",
-    image: "/images/crypto.gif",
+    lottie: cryptoAnimation,
   },
   {
     title: "Stock Market",
     description: "Invest in stocks intelligently, backed by deep data analytics and fast execution.",
-    image: "/images/stocks.gif",
+    lottie: stocksAnimation,
   },
   {
     title: "AI Trading System",
     description: "Our AI analyzes millions of data points continuously to maximize your profit potential.",
-    image: "/images/ai-trading.gif",
+    lottie: aiTradingAnimation,
   },
 ];
 
@@ -36,7 +39,7 @@ export default function ServicesSection() {
       </h2>
 
       <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {services.map(({ title, description, image, lottie }, idx) => (
+        {services.map(({ title, description, lottie }, idx) => (
           <motion.div
             key={idx}
             className="bg-slate-800 rounded-xl overflow-hidden shadow-md cursor-pointer hover:shadow-blue-500/30 transition-shadow"
@@ -46,20 +49,10 @@ export default function ServicesSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: idx * 0.2 }}
           >
-            <figure className="bg-black flex flex-col items-center justify-center h-80 p-4 gap-4">
-              {lottie && (
-                <div className="w-44 h-44">
-                  <Lottie animationData={lottie} loop />
-                </div>
-              )}
-              {image && (
-                <img
-                  src={image}
-                  alt={`${title} service image`}
-                  className="w-50 h-auto object-contain drop-shadow-xl"
-                  loading="lazy"
-                />
-              )}
+            <figure className="bg-black flex items-center justify-center h-64 p-6">
+              <div className="w-44 h-44">
+                <Lottie animationData={lottie} loop />
+              </div>
             </figure>
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
