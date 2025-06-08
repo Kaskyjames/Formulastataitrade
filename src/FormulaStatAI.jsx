@@ -1,3 +1,4 @@
+// FormulaStatAI.jsx
 import React from "react";
 import Navbar from "./components/Navbar";
 import { motion } from "framer-motion";
@@ -74,28 +75,29 @@ export default function FormulaStatAI() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 1 }}
-          className="max-w-md mx-auto"
+          className="max-w-4xl mx-auto"
         >
           <motion.video
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ delay: 0.2, duration: 1 }}
-  src={heroVideo}
-  autoPlay
-  muted
-  loop
-  playsInline
-  className="w-full max-w-3xl rounded-xl mx-auto shadow-lg"
-/>
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 1 }}
+            src={heroVideo}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full rounded-2xl mx-auto shadow-2xl"
+          />
         </motion.div>
-      <div className="mt-6">
-  <Link
-    to="/signup"
-    className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-2xl shadow-md text-lg transition duration-300"
-  >
-    Get Started
-  </Link>
-</div>
+
+        <div className="mt-6">
+          <Link
+            to="/signup"
+            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-2xl shadow-md text-lg transition duration-300"
+          >
+            Get Started
+          </Link>
+        </div>
 
         <motion.p
           initial={{ opacity: 0 }}
@@ -129,7 +131,7 @@ export default function FormulaStatAI() {
         </motion.div>
       </section>
 
-      {/* AI TRADING SECTION */}
+      {/* REMAINING SECTIONS (unchanged) */}
       <section className="text-center space-y-6">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
@@ -147,10 +149,8 @@ export default function FormulaStatAI() {
         </p>
       </section>
 
-      {/* SERVICES SECTION */}
-      <ServicesSection /> 
-      
-      {/* HOW IT WORKS */}
+      <ServicesSection />
+
       <section className="space-y-10 text-center">
         <h2 className="text-3xl font-bold">How It Works</h2>
         <p className="max-w-2xl mx-auto text-lg text-gray-300">
@@ -169,7 +169,6 @@ export default function FormulaStatAI() {
         </div>
       </section>
 
-      {/* WHY TRUST US */}
       <section className="space-y-8 text-center">
         <h2 className="text-3xl font-bold">Why Trust Formula Stat AI Trade?</h2>
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto text-left">
@@ -199,7 +198,6 @@ export default function FormulaStatAI() {
         </div>
       </section>
 
-      {/* TESTIMONIALS SECTION */}
       <section className="space-y-8 text-center">
         <h2 className="text-3xl font-bold">What Our Users Say</h2>
         <Swiper
@@ -227,7 +225,6 @@ export default function FormulaStatAI() {
         </Swiper>
       </section>
 
-      {/* FINAL CTA SECTION */}
       <section className="text-center space-y-4">
         <h2 className="text-2xl font-bold">Join the Future of Intelligent Trading</h2>
         <p className="max-w-xl mx-auto text-lg text-gray-300">
