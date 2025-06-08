@@ -10,14 +10,28 @@ export default function About() {
 
       {/* HERO SECTION */}
       <section className="relative text-center space-y-4 overflow-hidden rounded-2xl border border-slate-800 p-6">
-        <div className="absolute inset-0 animate-bgGlow bg-gradient-to-br from-blue-500/20 via-purple-500/10 to-transparent opacity-30 blur-2xl pointer-events-none"></div>
-        <h1 className="text-4xl md:text-5xl font-bold text-blue-400 relative z-10">
-          About Formula Stat AI Trade
-        </h1>
-        <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto relative z-10">
-          Built with a mission to empower individuals and investors, Formula Stat AI Trade blends advanced artificial intelligence with real-time market logic to automate and optimize trading.
-        </p>
-      </section>
+  {/* MP4 Video Background */}
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover opacity-20 z-0"
+  >
+    <source src="/ai-video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  {/* Text content layered above video */}
+  <div className="relative z-10 space-y-4">
+    <h1 className="text-4xl md:text-5xl font-bold text-blue-400">
+      About Formula Stat AI Trade
+    </h1>
+    <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+      Built with a mission to empower individuals and investors, Formula Stat AI Trade blends advanced artificial intelligence with real-time market logic to automate and optimize trading.
+    </p>
+  </div>
+</section>
 
       {/* VISION + WHY WE EXIST */}
      <section className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
