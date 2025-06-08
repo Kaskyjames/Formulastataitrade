@@ -9,6 +9,7 @@ export default function About() {
       <section className="relative text-center space-y-4 overflow-hidden rounded-2xl border border-slate-800 p-6">
   {/* Animated background */}
   <div className="absolute inset-0 animate-bgGlow bg-gradient-to-br from-blue-500/20 via-purple-500/10 to-transparent opacity-30 blur-2xl pointer-events-none"></div>
+        </section>
         <h1 className="text-4xl md:text-5xl font-bold text-blue-400">
           About Formula Stat AI Trade
         </h1>
