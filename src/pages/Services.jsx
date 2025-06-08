@@ -1,7 +1,8 @@
+// src/pages/Services.jsx
 import React from "react";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
-import forexAnimation from "../../public/animations/forex-lottie.json"; // Import directly for Forex
+import forexAnimation from "../../public/animations/forex-lottie.json"; // Direct Lottie import
 
 const services = [
   {
@@ -46,9 +47,9 @@ export default function ServicesSection() {
             transition={{ duration: 0.5, delay: idx * 0.2 }}
             aria-label={`${title} service card`}
           >
-            <figure className="overflow-hidden h-64 flex flex-col items-center justify-center bg-black p-4">
+            <figure className="bg-black flex flex-col items-center justify-center p-6 gap-4 h-72 sm:h-80">
               {lottie && (
-                <div className="w-32 h-32">
+                <div className="w-36 h-36 sm:w-40 sm:h-40">
                   <Lottie animationData={lottie} loop />
                 </div>
               )}
@@ -56,7 +57,7 @@ export default function ServicesSection() {
                 <img
                   src={image}
                   alt={`${title} service image`}
-                  className="w-20 h-auto mt-4 object-contain"
+                  className="w-32 sm:w-40 h-auto object-contain drop-shadow-lg"
                   loading="lazy"
                 />
               )}
