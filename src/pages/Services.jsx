@@ -2,7 +2,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// Service card data
 const services = [
   {
     title: "Forex Trading",
@@ -28,12 +27,12 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-16 bg-slate-900 rounded-lg shadow-lg">
+    <section className="max-w-7xl mx-auto px-6 py-16 bg-slate-900 rounded-2xl shadow-lg">
       <h2 className="text-4xl font-bold text-center mb-12 text-blue-500">
         Our Services
       </h2>
 
-      <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {services.map(({ title, description, image }, idx) => (
           <motion.div
             key={idx}
@@ -43,12 +42,13 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: idx * 0.2 }}
+            aria-label={`${title} service card`}
           >
             <figure className="overflow-hidden h-48">
               <img
                 src={image}
-                alt={`${title} illustration`}
-                className="w-full h-full object-cover object-center transition-transform duration-300 ease-in-out hover:scale-110"
+                alt={`${title} service illustration`}
+                className="w-full h-full object-cover object-center rounded-t-xl transition-transform duration-300 ease-in-out hover:scale-110"
                 loading="lazy"
               />
             </figure>
