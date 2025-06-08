@@ -1,13 +1,14 @@
+// src/pages/Services.jsx
 import React from "react";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
-import forexAnimation from "../../public/animations/forex-lottie.json"; // Correct path for Lottie
+import forexAnimation from "../../public/animations/forex-lottie.json";
 
 const services = [
   {
     title: "Forex Trading",
     description: "Trade currencies worldwide with AI-powered precision and real-time market insights.",
-    lottie: "forex-lottie.json", // path relative to public/animations
+    lottie: forexAnimation,
   },
   {
     title: "Cryptocurrency",
