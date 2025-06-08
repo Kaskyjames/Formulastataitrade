@@ -1,17 +1,15 @@
-// src/pages/Services.jsx
 import React from "react";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
-import forexAnimation from "../../public/animations/forex-lottie.json";
+import forexAnimation from "../../public/animations/forex-lottie.json"; // Import directly for Forex
 
 const services = [
   {
     title: "Forex Trading",
     description: "Trade currencies worldwide with AI-powered precision and real-time market insights.",
-    lottie: "forex-lottie.json", // Lottie JSON
-    image: "/images/forex-chart.png", // PNG image
+    lottie: forexAnimation,
+    image: "/images/forex-chart.png",
   },
-  // ... other services remain unchanged
   {
     title: "Cryptocurrency",
     description: "Navigate volatile crypto markets with adaptive algorithms and secure automation.",
@@ -49,20 +47,20 @@ export default function ServicesSection() {
             aria-label={`${title} service card`}
           >
             <figure className="overflow-hidden h-64 flex flex-col items-center justify-center bg-black p-4">
-  {lottie && (
-    <div className="w-32 h-32">
-      <Lottie animationData={require(`../../public/animations/${lottie}`)} loop />
-    </div>
-  )}
-  {image && (
-    <img
-      src={image}
-      alt={`${title} service image`}
-      className="w-20 h-auto mt-4 object-contain"
-      loading="lazy"
-    />
-  )}
-</figure>
+              {lottie && (
+                <div className="w-32 h-32">
+                  <Lottie animationData={lottie} loop />
+                </div>
+              )}
+              {image && (
+                <img
+                  src={image}
+                  alt={`${title} service image`}
+                  className="w-20 h-auto mt-4 object-contain"
+                  loading="lazy"
+                />
+              )}
+            </figure>
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
               <p className="text-gray-300 text-sm leading-relaxed">{description}</p>
