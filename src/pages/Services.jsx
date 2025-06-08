@@ -41,14 +41,13 @@ export default function ServicesSection() {
       <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {services.map(({ title, description, lottie }, idx) => (
           <motion.div
-            key={idx}
-            className="bg-slate-800 rounded-xl overflow-hidden shadow-md cursor-pointer hover:shadow-blue-500/30 transition-shadow"
-            whileHover={{ scale: 1.05, opacity: 0.95 }}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: idx * 0.2 }}
-          >
+  key={idx}
+  className="bg-slate-800 rounded-xl overflow-hidden shadow-md cursor-pointer hover:shadow-blue-500/30 transition-shadow"
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.6, delay: idx * 0.2 }}
+>
             <figure className="bg-black flex items-center justify-center h-64 p-6">
   <div className="w-full max-w-[180px] h-[180px] transition-transform duration-300 hover:scale-105">
   <Lottie animationData={lottie} loop />
