@@ -50,9 +50,9 @@ export default function ServicesSection() {
             transition={{ duration: 0.5, delay: idx * 0.2 }}
           >
             <figure className="bg-black flex items-center justify-center h-64 p-6">
-  <div className="w-full max-w-[180px] h-[180px]">
-    <Lottie animationData={lottie} loop />
-  </div>
+  <div className="w-full max-w-[180px] h-[180px] transition-transform duration-300 hover:scale-105">
+  <Lottie animationData={lottie} loop />
+</div>
 </figure>
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
