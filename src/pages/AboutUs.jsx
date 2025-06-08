@@ -34,23 +34,65 @@ export default function About() {
         </div>
       </section>
 
-      <section className="max-w-5xl mx-auto text-center space-y-6">
-        <h2 className="text-3xl font-bold text-blue-400">What Makes Us Different</h2>
-        <ul className="space-y-4 text-left text-gray-300 list-disc list-inside">
-          <li>
-            <span className="text-white font-semibold">Real AI Integration:</span> Not a buzzword. We use actual deep learning and adaptive algorithms to trade live markets.
-          </li>
-          <li>
-            <span className="text-white font-semibold">User Dashboard:</span> Full access to your account and trading behavior. No hidden decisions.
-          </li>
-          <li>
-            <span className="text-white font-semibold">Security Focused:</span> We keep user data and funds safe with best practices and system logic.
-          </li>
-          <li>
-            <span className="text-white font-semibold">Human Touch:</span> We may be AI-powered, but this brand is built on vision, empathy, and responsibility.
-          </li>
-        </ul>
-      </section>
+      import { Sparkles, GaugeCircle, ShieldCheck, Heart } from "lucide-react";
+import { motion } from "framer-motion";
+
+<section className="max-w-5xl mx-auto text-center space-y-6">
+  <h2 className="text-3xl font-bold text-blue-400">What Makes Us Different</h2>
+  <ul className="space-y-6 text-left text-gray-300">
+    <motion.li
+      className="flex items-start gap-4"
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      <Sparkles className="text-blue-400 mt-1" size={24} />
+      <div>
+        <span className="text-white font-semibold">Real AI Integration:</span>{" "}
+        Not a buzzword. We use actual deep learning and adaptive algorithms to trade live markets.
+      </div>
+    </motion.li>
+
+    <motion.li
+      className="flex items-start gap-4"
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6, delay: 0.1 }}
+    >
+      <GaugeCircle className="text-green-400 mt-1" size={24} />
+      <div>
+        <span className="text-white font-semibold">User Dashboard:</span>{" "}
+        Full access to your account and trading behavior. No hidden decisions.
+      </div>
+    </motion.li>
+
+    <motion.li
+      className="flex items-start gap-4"
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+    >
+      <ShieldCheck className="text-purple-400 mt-1" size={24} />
+      <div>
+        <span className="text-white font-semibold">Security Focused:</span>{" "}
+        We keep user data and funds safe with best practices and system logic.
+      </div>
+    </motion.li>
+
+    <motion.li
+      className="flex items-start gap-4"
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6, delay: 0.3 }}
+    >
+      <Heart className="text-pink-400 mt-1" size={24} />
+      <div>
+        <span className="text-white font-semibold">Human Touch:</span>{" "}
+        We may be AI-powered, but this brand is built on vision, empathy, and responsibility.
+      </div>
+    </motion.li>
+  </ul>
+</section>
 
       <section className="text-center space-y-4 mt-10">
         <h2 className="text-2xl font-bold">Ready to Experience the Future of Trading?</h2>
