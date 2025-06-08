@@ -1,92 +1,49 @@
-import React from "react";
-import { motion } from "framer-motion";
-import Lottie from "lottie-react";
-import animationData from "../assets/Animation_2.json"; // Replace with your preferred animation
-import SecuritySnapshot from "@/components/SecuritySnapshot";
-export default function AboutUs() {
-  return (
-    <div className="min-h-screen bg-slate-950 text-white px-4 py-16 space-y-16">
-      {/* HEADER SECTION */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-center"
-      >
-        <h1 className="text-4xl md:text-5xl font-bold text-blue-400">
-          About Formula Stat AI Trade
-        </h1>
-        <p className="mt-4 max-w-2xl mx-auto text-gray-300 text-lg">
-          Harnessing Artificial Intelligence to redefine financial freedom in a volatile world.
-        </p>
-      </motion.div>
-<SecuritySnapshot />
-      {/* LOTTIE ANIMATION */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1.2 }}
-        className="max-w-2xl mx-auto"
-      >
-        <Lottie animationData={animationData} loop={true} />
-      </motion.div>
+import React from "react"; import Navbar from "../components/Navbar";
 
-      {/* OUR MISSION */}
-      <motion.section
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-        className="space-y-4 max-w-4xl mx-auto text-center"
-      >
-        <h2 className="text-3xl font-semibold text-blue-400">Our Mission</h2>
-        <p className="text-lg text-gray-300">
-          To democratize access to advanced trading intelligence by leveraging cutting-edge AI
-          technology that analyzes, predicts, and executes trades across Forex, Crypto, and Stock markets.
-        </p>
-      </motion.section>
+export default function About() { return ( <div className="min-h-screen bg-slate-950 text-white px-6 py-10 space-y-12"> <Navbar />
 
-      {/* OUR STORY */}
-      <motion.section
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-        className="space-y-4 max-w-4xl mx-auto text-center"
-      >
-        <h2 className="text-3xl font-semibold text-blue-400">Our Story</h2>
-        <p className="text-lg text-gray-300">
-          In an era where inflation erodes value and traditional jobs no longer guarantee stability,
-          Formula Stat AI was born from a realization: intelligent automation could bridge the growing gap
-          between income and living cost. We built a system that mimics the decision-making logic of top
-          traders—yet processes more data, faster, without fatigue.
-        </p>
-      </motion.section>
+<section className="text-center space-y-4">
+    <h1 className="text-4xl md:text-5xl font-bold text-blue-400">
+      About Formula Stat AI Trade
+    </h1>
+    <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+      Built with a mission to empower individuals and investors, Formula Stat AI Trade blends advanced artificial intelligence with real-time market logic to automate and optimize trading.
+    </p>
+  </section>
 
-      {/* CORE VALUES */}
-      <motion.section
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-        className="space-y-4 max-w-4xl mx-auto text-center"
-      >
-        <h2 className="text-3xl font-semibold text-blue-400">Core Values</h2>
-        <ul className="space-y-3 text-left text-gray-300 list-disc list-inside">
-          <li>
-            <strong className="text-white">Innovation:</strong> We constantly evolve our AI to adapt to market realities.
-          </li>
-          <li>
-            <strong className="text-white">Transparency:</strong> Every user sees how decisions are made and profits are earned.
-          </li>
-          <li>
-            <strong className="text-white">Empowerment:</strong> We give people control over wealth creation using automation.
-          </li>
-          <li>
-            <strong className="text-white">Reliability:</strong> Our systems are stress-tested and monitored for peak performance.
-          </li>
-        </ul>
-      </motion.section>
+  <section className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+    <div className="bg-slate-800 p-6 rounded-xl shadow space-y-4">
+      <h2 className="text-2xl font-semibold text-blue-300">Our Vision</h2>
+      <p className="text-gray-300">
+        We envision a world where anyone—from beginners to seasoned traders—can benefit from intelligent, automated trading systems that operate with transparency, reliability, and speed.
+      </p>
     </div>
-  );
-}
+
+    <div className="bg-slate-800 p-6 rounded-xl shadow space-y-4">
+      <h2 className="text-2xl font-semibold text-blue-300">Why We Exist</h2>
+      <p className="text-gray-300">
+        Trading is stressful and time-consuming. Formula Stat AI Trade takes the guesswork out of it, giving users freedom, clarity, and performance backed by data—not emotion.
+      </p>
+    </div>
+  </section>
+
+  <section className="max-w-5xl mx-auto text-center space-y-6">
+    <h2 className="text-3xl font-bold text-blue-400">What Makes Us Different</h2>
+    <ul className="space-y-4 text-left text-gray-300 list-disc list-inside">
+      <li><span className="text-white font-semibold">Real AI Integration:</span> Not a buzzword. We use actual deep learning and adaptive algorithms to trade live markets.</li>
+      <li><span className="text-white font-semibold">User Dashboard:</span> Full access to your account and trading behavior. No hidden decisions.</li>
+      <li><span className="text-white font-semibold">Security Focused:</span> We keep user data and funds safe with best practices and system logic.</li>
+      <li><span className="text-white font-semibold">Human Touch:</span> We may be AI-powered, but this brand is built on vision, empathy, and responsibility.</li>
+    </ul>
+  </section>
+
+  <section className="text-center space-y-4 mt-10">
+    <h2 className="text-2xl font-bold">Ready to Experience the Future of Trading?</h2>
+    <a
+      href="/signup"
+      className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl text-lg transition"
+    >
+      Get Started Today
+    </a>
+
+    
