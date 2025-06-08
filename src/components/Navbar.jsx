@@ -43,13 +43,13 @@ export default function Navbar() {
             }}
           />
           <div className="flex flex-col leading-tight">
-            <span className="text-xl font-bold text-blue-400">
-              Formula Stat AI
-            </span>
-            <span className="text-xs text-blue-300 mt-1 tracking-widest">
-              Secure. Smart. Automated.
-            </span>
-          </div>
+  <span className="text-xl font-bold text-blue-400">
+    Formula Stat AI Trade
+  </span>
+  <span className="text-xs text-blue-300 mt-1 tracking-widest">
+    Secure. Smart. Automated.
+  </span>
+</div>
         </Link>
 
         {/* Menu Toggle for Mobile */}
