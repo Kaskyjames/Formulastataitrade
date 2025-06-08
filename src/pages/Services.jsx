@@ -1,12 +1,13 @@
-// src/pages/Services.jsx
 import React from "react";
 import { motion } from "framer-motion";
+import Lottie from "lottie-react";
+import forexAnimation from "../../public/animations/forex-lottie.json"; // Correct path for Lottie
 
 const services = [
   {
     title: "Forex Trading",
     description: "Trade currencies worldwide with AI-powered precision and real-time market insights.",
-    image: "/images/forex.gif",
+    lottie: forexAnimation, // Using Lottie animation
   },
   {
     title: "Cryptocurrency",
@@ -33,7 +34,7 @@ export default function ServicesSection() {
       </h2>
 
       <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {services.map(({ title, description, image }, idx) => (
+        {services.map(({ title, description, image, lottie }, idx) => (
           <motion.div
             key={idx}
             className="bg-slate-800 rounded-xl overflow-hidden shadow-md cursor-pointer hover:shadow-blue-500/30 transition-shadow"
@@ -44,13 +45,17 @@ export default function ServicesSection() {
             transition={{ duration: 0.5, delay: idx * 0.2 }}
             aria-label={`${title} service card`}
           >
-            <figure className="overflow-hidden h-48">
-              <img
-                src={image}
-                alt={`${title} service illustration`}
-                className="w-full h-full object-cover object-center rounded-t-xl transition-transform duration-300 ease-in-out hover:scale-110"
-                loading="lazy"
-              />
+            <figure className="overflow-hidden h-48 flex justify-center items-center bg-black">
+              {lottie ? (
+                <Lottie animationData={lottie} className="w-40 h-40" loop />
+              ) : (
+                <img
+                  src={image}
+                  alt={`${title} service illustration`}
+                  className="w-full h-full object-cover object-center transition-transform duration-300 ease-in-out hover:scale-110"
+                  loading="lazy"
+                />
+              )}
             </figure>
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
