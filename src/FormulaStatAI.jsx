@@ -141,7 +141,7 @@ export default function FormulaStatAI() {
 
       {/* SERVICES SECTION */}
       <ServicesSection />
-
+<SecuritySnapshot />
       {/* HOW IT WORKS */}
       <section className="space-y-10 text-center">
         <h2 className="text-3xl font-bold">How It Works</h2>
