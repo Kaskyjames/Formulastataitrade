@@ -15,7 +15,16 @@ export default function Navbar() {
       transition={{ duration: 0.6 }}
       className="sticky top-0 z-50 bg-slate-950 text-white border-b border-slate-800 shadow-sm"
     >
-      <div className="flex items-center gap-3">
+      <div className="flex flex-col items-start">
+  <img
+    src={logo}
+    alt="Formula Stat AI"
+    className="h-10 md:h-12"
+  />
+  <span className="text-xs text-blue-400 mt-1 tracking-wide">
+    Secure. Smart. Automated.
+  </span>
+</div>
   <img src={logo} alt="Formula Stat AI Logo" className="w-10 h-10 object-contain" />
   <span className="text-xl font-bold text-blue-400">Formula Stat AI</span>
 </div>
