@@ -26,6 +26,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 
 // Import ServicesSection
 import ServicesSection from "./pages/ServicesSection";
+import WhyChooseUs from "./sections/WhyChooseUs";
 
 const chartData = [
   { name: "Jan", value: 400 },
@@ -66,6 +67,7 @@ export default function FormulaStatAI() {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-6xl font-bold text-blue-400"
         >
+          <WhyChooseUs />
           Formula Stat AI Trade
         </motion.h1>
 
