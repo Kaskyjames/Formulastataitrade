@@ -9,6 +9,8 @@ body {
   background-size: 300% 300%;
   animation: backgroundMove 10s ease infinite;
   color: white;
+  scroll-behavior: smooth;
+  transition: background 0.3s ease-in-out;
 }
 
 @keyframes backgroundMove {
@@ -38,4 +40,18 @@ h1, h2, h3 {
 section {
   padding-top: 2rem;
   padding-bottom: 2rem;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+/* Section fade-in animation */
+@keyframes fadeIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
