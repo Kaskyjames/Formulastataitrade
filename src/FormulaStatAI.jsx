@@ -12,6 +12,7 @@ import {
 import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
 import animationData from "./assets/Animation_1.json";
+import heroVideo from "./assets/hero-video.mp4";
 
 // Avatars
 import avatar1 from "./assets/testimonials/avatar1.jpg";
