@@ -76,7 +76,17 @@ export default function FormulaStatAI() {
           transition={{ delay: 0.2, duration: 1 }}
           className="max-w-md mx-auto"
         >
-          <Lottie animationData={animationData} loop={true} />
+          <motion.video
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.2, duration: 1 }}
+  src={heroVideo}
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="w-full max-w-3xl rounded-xl mx-auto shadow-lg"
+/>
         </motion.div>
 
         <motion.p
