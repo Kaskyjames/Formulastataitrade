@@ -15,32 +15,21 @@ export default function Navbar() {
       transition={{ duration: 0.6 }}
       className="sticky top-0 z-50 bg-slate-950 text-white border-b border-slate-800 shadow-sm"
     >
-      <div className="flex flex-col items-start">
-  <img
-    src={logo}
-    alt="Formula Stat AI"
-    className="h-10 md:h-12"
-  />
-  <span className="text-xs text-blue-400 mt-1 tracking-wide">
-    Secure. Smart. Automated.
-  </span>
-</div>
-  <img src={logo} alt="Formula Stat AI Logo" className="w-10 h-10 object-contain" />
-  <span className="text-xl font-bold text-blue-400">Formula Stat AI</span>
-</div>
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        {/* Logo and Tagline */}
         <Link to="/" className="flex items-center space-x-3">
           <motion.img
-            src="/logo.png"
-            alt="Formula Stat AI Trade Logo"
+            src={logo}
+            alt="Formula Stat AI Logo"
             className="w-14 md:w-16 lg:w-20"
             style={{ transformStyle: "preserve-3d" }}
             animate={{
-              rotateY: [0, 1080], // 3 spins
-              scale: [1, 1.3, 1, 1.3, 1], // zoom in/out twice
+              rotateY: [0, 1080],
+              scale: [1, 1.3, 1, 1.3, 1],
             }}
             transition={{
               rotateY: {
-                duration: 9, // 3 spins in 9 seconds (3s per spin)
+                duration: 9,
                 ease: "linear",
                 repeat: Infinity,
               },
@@ -53,73 +42,41 @@ export default function Navbar() {
               },
             }}
           />
-          <span className="text-2xl font-bold text-blue-500 select-none">
-            Formula Stat AI Trade
-          </span>
+          <div className="flex flex-col leading-tight">
+            <span className="text-xl font-bold text-blue-400">
+              Formula Stat AI
+            </span>
+            <span className="text-xs text-blue-300 mt-1 tracking-widest">
+              Secure. Smart. Automated.
+            </span>
+          </div>
         </Link>
 
+        {/* Menu Toggle for Mobile */}
         <div className="md:hidden">
           <button onClick={toggleMenu} aria-label="Toggle Menu">
             {open ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
 
+        {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 text-lg">
-          <li>
-            <Link to="/" className="hover:text-blue-400">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="hover:text-blue-400">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/services" className="hover:text-blue-400">
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link to="/dashboard" className="hover:text-blue-400">
-              Dashboard
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="hover:text-blue-400">
-              Contact
-            </Link>
-          </li>
+          <li><Link to="/" className="hover:text-blue-400">Home</Link></li>
+          <li><Link to="/about" className="hover:text-blue-400">About</Link></li>
+          <li><Link to="/services" className="hover:text-blue-400">Services</Link></li>
+          <li><Link to="/dashboard" className="hover:text-blue-400">Dashboard</Link></li>
+          <li><Link to="/contact" className="hover:text-blue-400">Contact</Link></li>
         </ul>
       </div>
 
+      {/* Mobile Dropdown Menu */}
       {open && (
         <ul className="md:hidden flex flex-col space-y-4 px-6 pb-4 text-lg bg-slate-950">
-          <li>
-            <Link to="/" onClick={toggleMenu}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" onClick={toggleMenu}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/services" onClick={toggleMenu}>
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link to="/dashboard" onClick={toggleMenu}>
-              Dashboard
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" onClick={toggleMenu}>
-              Contact
-            </Link>
-          </li>
+          <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
+          <li><Link to="/about" onClick={toggleMenu}>About</Link></li>
+          <li><Link to="/services" onClick={toggleMenu}>Services</Link></li>
+          <li><Link to="/dashboard" onClick={toggleMenu}>Dashboard</Link></li>
+          <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
         </ul>
       )}
     </motion.nav>
