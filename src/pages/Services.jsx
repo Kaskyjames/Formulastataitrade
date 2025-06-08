@@ -48,18 +48,21 @@ export default function ServicesSection() {
             transition={{ duration: 0.5, delay: idx * 0.2 }}
             aria-label={`${title} service card`}
           >
-            <figure className="overflow-hidden h-48 flex justify-center items-center bg-black">
-              {lottie ? (
-                <Lottie animationData={lottie} className="w-40 h-40" loop />
-              ) : (
-                <img
-                  src={image}
-                  alt={`${title} service illustration`}
-                  className="w-full h-full object-cover object-center transition-transform duration-300 ease-in-out hover:scale-110"
-                  loading="lazy"
-                />
-              )}
-            </figure>
+            <figure className="overflow-hidden h-64 flex flex-col items-center justify-center bg-black p-4">
+  {lottie && (
+    <div className="w-32 h-32">
+      <Lottie animationData={require(`../../public/animations/${lottie}`)} loop />
+    </div>
+  )}
+  {image && (
+    <img
+      src={image}
+      alt={`${title} service image`}
+      className="w-20 h-auto mt-4 object-contain"
+      loading="lazy"
+    />
+  )}
+</figure>
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
               <p className="text-gray-300 text-sm leading-relaxed">{description}</p>
