@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import animationData from "../assets/Animation_2.json"; // Replace with your preferred animation
-
+import SecuritySnapshot from "@/components/SecuritySnapshot";
 export default function AboutUs() {
   return (
     <div className="min-h-screen bg-slate-950 text-white px-4 py-16 space-y-16">
@@ -20,7 +20,7 @@ export default function AboutUs() {
           Harnessing Artificial Intelligence to redefine financial freedom in a volatile world.
         </p>
       </motion.div>
-
+<SecuritySnapshot />
       {/* LOTTIE ANIMATION */}
       <motion.div
         initial={{ opacity: 0 }}
