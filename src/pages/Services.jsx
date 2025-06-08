@@ -42,7 +42,7 @@ export default function ServicesSection() {
         {services.map(({ title, description, lottie }, idx) => (
           <motion.div
   key={idx}
-  className="bg-slate-800 rounded-xl overflow-hidden shadow-md cursor-pointer hover:shadow-blue-500/30 transition-shadow"
+  className="bg-slate-800 rounded-2xl overflow-hidden shadow-xl cursor-pointer transition-all duration-300 hover:shadow-[0_0_30px_#3b82f6] hover:scale-105"
   initial={{ opacity: 0, y: 40 }}
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true, amount: 0.3 }}
