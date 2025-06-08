@@ -20,7 +20,7 @@ export default function Navbar() {
         <Link to="/" className="flex items-center space-x-3">
           <motion.img
             src={logo}
-            alt="Formula Stat AI Logo"
+            alt="Formula Stat AI Trade Logo"
             className="w-14 md:w-16 lg:w-20"
             style={{ transformStyle: "preserve-3d" }}
             animate={{
