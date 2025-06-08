@@ -34,9 +34,9 @@ const services = [
 export default function ServicesSection() {
   return (
     <section className="max-w-7xl mx-auto px-6 py-16 bg-slate-900 rounded-2xl shadow-lg">
-      <h2 className="text-4xl font-bold text-center mb-12 text-blue-500">
-        Our Services
-      </h2>
+      <h2 className="text-5xl font-extrabold text-center mb-16 text-blue-400 tracking-tight">
+  Our Services
+</h2>
 
       <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {services.map(({ title, description, lottie }, idx) => (
