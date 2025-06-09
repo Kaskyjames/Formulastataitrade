@@ -1,8 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
-// ✅ Adjusted file names to match actual files in your repo
-import Home from "./pages/FormulaStatAI";
-import About from "./pages/AboutUs";
+import Home from "./FormulaStatAI";        // Correct: homepage file
+import About from "./pages/AboutUs";       // Note: AboutUs.jsx
 import Services from "./pages/Services";
 import Signup from "./pages/Signup";
 
