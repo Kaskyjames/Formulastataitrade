@@ -1,6 +1,6 @@
-// FormulaStatAI.jsx
+// src/FormulaStatAI.jsx
 import React from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar"; // ✅ Ensure this file exists
 import { motion } from "framer-motion";
 import {
   LineChart,
@@ -12,21 +12,23 @@ import {
 } from "recharts";
 import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
+
+// Assets
 import animationData from "./assets/Animation_1.json";
 import heroVideo from "./assets/hero-video.mp4";
 
-// Avatars
+// Testimonials avatars
 import avatar1 from "./assets/testimonials/avatar1.jpg";
 import avatar2 from "./assets/testimonials/avatar2.png";
 import avatar3 from "./assets/testimonials/avatar3.webp";
 
-// Swiper imports
+// Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 
-// Import ServicesSection
+// Services section
 import ServicesSection from "./pages/ServicesSection";
 
 const chartData = [
@@ -60,7 +62,7 @@ export default function FormulaStatAI() {
     <div className="min-h-screen bg-slate-950 text-white px-4 py-8 space-y-24">
       <Navbar />
 
-      {/* HERO SECTION */}
+      {/* HERO */}
       <section className="text-center space-y-6 mt-12">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
@@ -131,7 +133,7 @@ export default function FormulaStatAI() {
         </motion.div>
       </section>
 
-      {/* REMAINING SECTIONS (unchanged) */}
+      {/* AI TRADING */}
       <section className="text-center space-y-6">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
@@ -151,6 +153,7 @@ export default function FormulaStatAI() {
 
       <ServicesSection />
 
+      {/* HOW IT WORKS */}
       <section className="space-y-10 text-center">
         <h2 className="text-3xl font-bold">How It Works</h2>
         <p className="max-w-2xl mx-auto text-lg text-gray-300">
@@ -169,35 +172,35 @@ export default function FormulaStatAI() {
         </div>
       </section>
 
+      {/* WHY TRUST */}
       <section className="space-y-8 text-center">
         <h2 className="text-3xl font-bold">Why Trust Formula Stat AI Trade?</h2>
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto text-left">
-          <div className="bg-slate-800 p-6 rounded-xl shadow">
-            <h3 className="text-xl font-semibold mb-2 text-blue-400">
-              Transparency & Control
-            </h3>
-            <p className="text-gray-300">
-              Every trade is visible to you. Monitor performance, withdraw profits, or
-              pause trading anytime via your dashboard.
-            </p>
-          </div>
-          <div className="bg-slate-800 p-6 rounded-xl shadow">
-            <h3 className="text-xl font-semibold mb-2 text-blue-400">Smarter Decisions</h3>
-            <p className="text-gray-300">
-              Our AI processes millions of data points in seconds—spotting opportunities,
-              reacting to news, and adapting in real time.
-            </p>
-          </div>
-          <div className="bg-slate-800 p-6 rounded-xl shadow">
-            <h3 className="text-xl font-semibold mb-2 text-blue-400">Tailored For You</h3>
-            <p className="text-gray-300">
-              Whether you're risk-averse or aggressive, our system aligns with your strategy
-              and adjusts as your goals evolve.
-            </p>
-          </div>
+          {[
+            {
+              title: "Transparency & Control",
+              text: "Every trade is visible to you. Monitor performance, withdraw profits, or pause trading anytime via your dashboard.",
+            },
+            {
+              title: "Smarter Decisions",
+              text: "Our AI processes millions of data points in seconds—spotting opportunities, reacting to news, and adapting in real time.",
+            },
+            {
+              title: "Tailored For You",
+              text: "Whether you're risk-averse or aggressive, our system aligns with your strategy and adjusts as your goals evolve.",
+            },
+          ].map((item, i) => (
+            <div key={i} className="bg-slate-800 p-6 rounded-xl shadow">
+              <h3 className="text-xl font-semibold mb-2 text-blue-400">
+                {item.title}
+              </h3>
+              <p className="text-gray-300">{item.text}</p>
+            </div>
+          ))}
         </div>
       </section>
 
+      {/* TESTIMONIALS */}
       <section className="space-y-8 text-center">
         <h2 className="text-3xl font-bold">What Our Users Say</h2>
         <Swiper
@@ -225,6 +228,7 @@ export default function FormulaStatAI() {
         </Swiper>
       </section>
 
+      {/* CTA */}
       <section className="text-center space-y-4">
         <h2 className="text-2xl font-bold">Join the Future of Intelligent Trading</h2>
         <p className="max-w-xl mx-auto text-lg text-gray-300">
