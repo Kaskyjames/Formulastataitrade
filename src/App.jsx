@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
-// ✅ Use exact casing that matches your filenames in `src/pages`
-import Home from "./pages/Home.jsx";
+// ✅ Adjusted file names to match actual files in your repo
+import Home from "./pages/Home";
 import About from "./pages/AboutUs";
 import Services from "./pages/Services";
 import Signup from "./pages/Signup";
@@ -16,4 +16,3 @@ export default function App() {
     </Routes>
   );
 }
-
