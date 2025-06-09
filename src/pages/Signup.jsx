@@ -2,16 +2,31 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 import { Eye, EyeOff } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
   const [showPassword, setShowPassword] = useState(false);
+  const [form, setForm] = useState({ name: "", email: "", password: "" });
+  const navigate = useNavigate();
+
   const togglePassword = () => setShowPassword((prev) => !prev);
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // 🚧 You can handle actual sign-up logic here later
+    console.log("Form submitted:", form);
+    navigate("/"); // Redirect to homepage or dashboard
+  };
 
   return (
     <div className="min-h-screen bg-slate-950 text-white px-6 py-10">
       <Navbar />
 
-      {/* HERO SECTION */}
+      {/* Hero Section */}
       <motion.section
         className="text-center space-y-6 max-w-3xl mx-auto mb-12"
         initial={{ opacity: 0, y: 40 }}
@@ -26,19 +41,22 @@ export default function Signup() {
         </p>
       </motion.section>
 
-      {/* SIGNUP FORM */}
+      {/* Signup Form */}
       <motion.form
+        onSubmit={handleSubmit}
         className="bg-slate-800 border border-slate-700 max-w-xl mx-auto p-8 rounded-2xl shadow-xl space-y-6"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        onSubmit={(e) => e.preventDefault()}
       >
         {/* Full Name */}
         <div>
           <label className="block text-sm text-gray-400 mb-1">Full Name</label>
           <input
+            name="name"
             type="text"
+            value={form.name}
+            onChange={handleChange}
             required
             placeholder="John Doe"
             className="w-full px-4 py-3 rounded-xl bg-slate-900 text-white border border-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -49,7 +67,10 @@ export default function Signup() {
         <div>
           <label className="block text-sm text-gray-400 mb-1">Email Address</label>
           <input
+            name="email"
             type="email"
+            value={form.email}
+            onChange={handleChange}
             required
             placeholder="you@example.com"
             className="w-full px-4 py-3 rounded-xl bg-slate-900 text-white border border-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -60,7 +81,10 @@ export default function Signup() {
         <div className="relative">
           <label className="block text-sm text-gray-400 mb-1">Password</label>
           <input
+            name="password"
             type={showPassword ? "text" : "password"}
+            value={form.password}
+            onChange={handleChange}
             required
             placeholder="••••••••"
             className="w-full px-4 py-3 rounded-xl bg-slate-900 text-white border border-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-500 pr-12"
