@@ -1,95 +1,76 @@
-// src/components/ServicesSection.jsx
 import React from "react";
+import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
-import Lottie from "lottie-react";
-import { ArrowRight } from "lucide-react";
+import { BarChart2, Bitcoin, DollarSign, Brain } from "lucide-react";
 
-import forexAnimation from "../../public/animations/forex-lottie.json";
-import cryptoAnimation from "../../public/animations/crypto-lottie.json";
-import stocksAnimation from "../../public/animations/stocks-lottie.json";
-import aiTradingAnimation from "../../public/animations/ai-lottie.json";
-
-const services = [
-  {
-    title: "Forex Trading",
-    description:
-      "Trade currencies worldwide with AI-powered precision and real-time market insights.",
-    lottie: forexAnimation,
-    anchor: "#forex",
-  },
-  {
-    title: "Cryptocurrency",
-    description:
-      "Navigate volatile crypto markets with adaptive algorithms and secure automation.",
-    lottie: cryptoAnimation,
-    anchor: "#crypto",
-  },
-  {
-    title: "Stock Market",
-    description:
-      "Invest in stocks intelligently, backed by deep data analytics and fast execution.",
-    lottie: stocksAnimation,
-    anchor: "#stocks",
-  },
-  {
-    title: "AI Trading System",
-    description:
-      "Our AI analyzes millions of data points continuously to maximize your profit potential.",
-    lottie: aiTradingAnimation,
-    anchor: "#ai",
-  },
-];
-
-export default function ServicesSection() {
+export default function Services() {
   return (
-    <section
-      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-slate-900 rounded-2xl shadow-2xl"
-      aria-labelledby="services-heading"
-    >
-      <h2
-        id="services-heading"
-        className="text-5xl font-extrabold text-center mb-4 text-blue-400 tracking-tight"
-      >
-        Our Services
-      </h2>
-      <p className="text-center text-gray-400 max-w-3xl mx-auto mb-12 text-lg">
-        Experience next-generation trading across Forex, Crypto, Stocks, and AI—fully automated, deeply secure, and precision-guided by intelligence.
-      </p>
+    <div className="min-h-screen bg-slate-950 text-white px-6 py-10 space-y-16">
+      <Navbar />
 
-      <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {services.map(({ title, description, lottie, anchor }, idx) => (
-          <motion.article
-            key={idx}
-            className="bg-slate-800 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:shadow-[0_0_30px_#3b82f6] hover:scale-105"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, delay: idx * 0.2 }}
-            aria-label={`Service: ${title}`}
-          >
-            <figure className="bg-black flex items-center justify-center h-64 p-6">
-              <div className="w-full max-w-[180px] h-[180px] transition-transform duration-300 hover:scale-105">
-                {lottie ? (
-                  <Lottie animationData={lottie} loop />
-                ) : (
-                  <ArrowRight className="text-white w-full h-full" />
-                )}
-              </div>
-            </figure>
-            <div className="px-6 py-5 text-center">
-              <h3 className="text-2xl font-semibold mb-3 text-white">{title}</h3>
-              <p className="text-gray-400 text-base leading-relaxed mb-6">{description}</p>
-              <a
-                href={anchor}
-                className="inline-flex items-center justify-center gap-2 bg-blue-500 text-white px-5 py-2 rounded-full hover:bg-blue-600 transition"
-                aria-label={`Learn more about ${title}`}
-              >
-                Learn More <ArrowRight size={18} />
-              </a>
-            </div>
-          </motion.article>
-        ))}
-      </div>
-    </section>
+      {/* HERO SECTION */}
+      <motion.section
+        className="text-center space-y-6"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h1 className="text-4xl md:text-5xl font-bold text-blue-400">Our Services</h1>
+        <p className="text-gray-300 max-w-2xl mx-auto text-lg">
+          Formula Stat AI Trade delivers high-performance financial trading across Forex, Crypto, Stocks, and AI-powered systems — engineered to help you win.
+        </p>
+      </motion.section>
+
+      {/* SERVICE CARDS */}
+      <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        {/* Forex Trading */}
+        <motion.div
+          className="bg-slate-800 p-6 rounded-2xl shadow-xl text-center space-y-4 border border-slate-700 hover:scale-105 transition"
+          whileHover={{ scale: 1.05 }}
+        >
+          <DollarSign className="mx-auto text-green-400" size={36} />
+          <h2 className="text-xl font-bold text-white">Forex Trading</h2>
+          <p className="text-gray-300 text-sm">
+            Tap into the largest financial market with AI-precision trades that analyze currency pairs in real-time.
+          </p>
+        </motion.div>
+
+        {/* Crypto Trading */}
+        <motion.div
+          className="bg-slate-800 p-6 rounded-2xl shadow-xl text-center space-y-4 border border-slate-700 hover:scale-105 transition"
+          whileHover={{ scale: 1.05 }}
+        >
+          <Bitcoin className="mx-auto text-yellow-400" size={36} />
+          <h2 className="text-xl font-bold text-white">Crypto Trading</h2>
+          <p className="text-gray-300 text-sm">
+            Navigate the crypto world with intelligent bots that trade 24/7 using real-time volatility detection.
+          </p>
+        </motion.div>
+
+        {/* Stock Market */}
+        <motion.div
+          className="bg-slate-800 p-6 rounded-2xl shadow-xl text-center space-y-4 border border-slate-700 hover:scale-105 transition"
+          whileHover={{ scale: 1.05 }}
+        >
+          <BarChart2 className="mx-auto text-blue-300" size={36} />
+          <h2 className="text-xl font-bold text-white">Stock Trading</h2>
+          <p className="text-gray-300 text-sm">
+            Invest in leading companies and indices with AI insights that track price actions, news, and trend reversals.
+          </p>
+        </motion.div>
+
+        {/* AI-Powered Strategy */}
+        <motion.div
+          className="bg-slate-800 p-6 rounded-2xl shadow-xl text-center space-y-4 border border-slate-700 hover:scale-105 transition"
+          whileHover={{ scale: 1.05 }}
+        >
+          <Brain className="mx-auto text-purple-400" size={36} />
+          <h2 className="text-xl font-bold text-white">AI Trading Engine</h2>
+          <p className="text-gray-300 text-sm">
+            The heartbeat of our system — self-learning algorithms that adapt and evolve as the market changes.
+          </p>
+        </motion.div>
+      </section>
+    </div>
   );
 }
