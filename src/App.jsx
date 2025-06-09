@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 
 // ✅ Use exact casing that matches your filenames in `src/pages`
-import Home from "./pages/Home";
-import About from "./pages/About";
+import Home from "./pages/FormulaStatAI";
+import About from "./pages/AboutUs";
 import Services from "./pages/Services";
 import Signup from "./pages/Signup";
 
